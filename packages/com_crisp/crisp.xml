@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" version="3.5" method="upgrade">
+	<name>Crisp</name>
+	<author>Crisp IM</author>
+	<authorEmail>baptiste@crisp.im, elecoest@gmail.com</authorEmail>
+	<authorUrl>https://crisp.im, https://www.allevents3.com</authorUrl>
+	<creationDate></creationDate>
+	<version>1.0.0</version>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<url>https://crisp.im</url>
+	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
+
+	<!-- Media files -->
+	<media folder="media/com_crisp" destination="com_crisp">
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
+
+	<!-- Back-end files -->
+	<administration>
+		<!-- Menu entries -->
+		<menu link="option=com_crisp">Crisp</menu>
+
+		<!-- Core files -->
+		<files folder="administrator/components/com_crisp">
+			<filename>crisp.php</filename>
+			<filename>controller.php</filename>
+			<filename>LICENSE.txt</filename>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+</extension>

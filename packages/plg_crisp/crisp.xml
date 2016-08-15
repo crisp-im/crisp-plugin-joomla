@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="system" method="upgrade">
+	<name>Crisp</name>
+	<author>Crisp IM</author>
+	<authorEmail>baptiste@crisp.im, elecoest@gmail.com</authorEmail>
+	<authorUrl>https://crisp.im, https://www.allevents3.com</authorUrl>
+	<creationDate></creationDate>
+	<version>1.0.0</version>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<url>https://crisp.im</url>
+	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Plugin files -->
+	<files>
+		<filename plugin="crisp">crisp.php</filename>
+	</files>
+
+</extension>
