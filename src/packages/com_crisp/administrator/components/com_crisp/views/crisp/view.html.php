@@ -33,8 +33,8 @@ class CrispViewCrisp extends JViewLegacy
 
 		$params = JComponentHelper::getParams('com_crisp');
 
-		if (isset($_GET["crisp_website_id"])) {
-  		$params->set('website_id', $_GET["crisp_website_id"]);
+		if (!empty($jinput->get('crisp_website_id', ''))) {
+  			$params->set('website_id', $jinput->get('crisp_website_id', ''));
 			$componentid = JComponentHelper::getComponent('com_crisp')->id;
 			$table = JTable::getInstance('extension');
 			$table->load($componentid);
