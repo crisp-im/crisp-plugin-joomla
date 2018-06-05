@@ -11,16 +11,20 @@
 	<name>Crisp</name>
 	<packagename>crisp</packagename>
 	<author>Crisp IM</author>
-	<authorEmail>baptiste@crisp.im, elecoest@gmail.com</authorEmail>
-	<authorUrl>https://crisp.im, https://www.allevents3.com</authorUrl>
+	<authorEmail>baptiste@crisp.chat</authorEmail>
+	<authorUrl>https://crisp.chat</authorUrl>
 	<creationDate></creationDate>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<url>https://crisp.im</url>
+	<url>https://crisp.chat</url>
 	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
 
 	<files folder="packages">
 		<file type="component" id="com_crisp">com_crisp.zip</file>
 		<file type="plugin" id="crisp" group="content">plg_crisp.zip</file>
 	</files>
+
+	<updateservers>
+    	<server type="extension" name="Crisp Joomla Update Site">https://github.com/crisp-im/crisp-plugin-joomla/raw/master/dist/manifest.xml</server>
+ 	</updateservers>
 </extension>
