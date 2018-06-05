@@ -58,9 +58,10 @@ class CrispViewCrisp extends JViewLegacy
 
 		$http_callback = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-    $this->add_to_crisp_link = "https://app.crisp.im/initiate/plugin/825e4121-c11c-4135-9d99-fc5d192ae421?payload=" . $http_callback;
+		$this->website_id = $params->get('website_id');
+    	$this->add_to_crisp_link = "https://app.crisp.im/initiate/plugin/dcf5e6fb-d975-4e7c-935d-1b7493220dbc?payload=" . $http_callback;
 
-    if (!$is_installed) {
+    	if (!$is_installed) {
 			// Display it all
 			parent::display($tpl);
 		} else {

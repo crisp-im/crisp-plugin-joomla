@@ -16,143 +16,143 @@ defined('_JEXEC') or die;
  */
 class plgSystemCrisp extends JPlugin
 {
-	/**
-	 * Application object
-	 *
-	 * @var    JApplicationCms
-	 * @since  1.0
-	 */
-	protected $app;
+  /**
+   * Application object
+   *
+   * @var    JApplicationCms
+   * @since  1.0
+   */
+  protected $app;
 
-	/**
-	 * Database object
-	 *
-	 * @var    JDatabaseDriver
-	 * @since  1.0
-	 */
-	protected $db;
+  /**
+   * Database object
+   *
+   * @var    JDatabaseDriver
+   * @since  1.0
+   */
+  protected $db;
 
-	/**
-	 * Affects constructor behavior. If true, language files will be loaded automatically.
-	 *
-	 * @var    boolean
-	 * @since  1.0
-	 */
-	protected $autoloadLanguage = true;
+  /**
+   * Affects constructor behavior. If true, language files will be loaded automatically.
+   *
+   * @var    boolean
+   * @since  1.0
+   */
+  protected $autoloadLanguage = true;
 
-	/**
-	 * onAfterInitialise.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterInitialise()
-	{
-		$app = JFactory::getApplication();
+  /**
+   * onAfterInitialise.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterInitialise()
+  {
+    $app = JFactory::getApplication();
     $doc = JFactory::getDocument();
     $user = JFactory::getUser();
 
     if (!$app->isSite() || ($doc->getMimeEncoding() != 'text/html'))
-			return;
+      return;
 
-		$params = JComponentHelper::getParams('com_crisp');
+    $params = JComponentHelper::getParams('com_crisp');
 
-		$is_installed = !empty($params->get('website_id'));
+    $is_installed = !empty($params->get('website_id'));
 
-		if (!$is_installed) {
-			return;
-		}
+    if (!$is_installed) {
+      return;
+    }
 
-		$website_id = $params->get('website_id');
+    $website_id = $params->get('website_id');
 
     $script = "
-       CRISP_WEBSITE_ID = '" . $website_id . "';
-       (function(){
-         d=document;s=d.createElement('script');
-         s.src='https://client.crisp.im/l.js';
-         s.async=1;d.getElementsByTagName('head')[0].appendChild(s);
-       })();
+      window.CRISP_WEBSITE_ID = '" . $website_id . "';
+      window.\$crisp=[];
+      (function(){
+        d=document;s=d.createElement('script');
+        s.src='https://client.crisp.chat/l.js';
+        s.async=1;d.getElementsByTagName('head')[0].appendChild(s);
+      })();
     ";
     $doc->addScriptDeclaration($script, $type = 'text/javascript');
 
     if (!$user->guest) {
-      $script = 'window.CRISP_READY_TRIGGER = function() {
-         					$crisp.set("user:email", "' . $user->email . '");
-        				};';
-			$doc->addScriptDeclaration($script, $type = 'text/javascript');
+      $script = '$crisp.push(["set", "user:email", "' . $user->email . '"]);';
+      $script = '$crisp.push(["set", "user:nickname", "' . $user->name . '"]);';
+      $doc->addScriptDeclaration($script, $type = 'text/javascript');
     }
-	}
+  }
 
-	/**
-	 * onAfterRoute.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterRoute()
-	{
+  /**
+   * onAfterRoute.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterRoute()
+  {
 
-	}
+  }
 
-	/**
-	 * onAfterDispatch.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterDispatch()
-	{
+  /**
+   * onAfterDispatch.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterDispatch()
+  {
 
-	}
+  }
 
-	/**
-	 * onAfterRender.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterRender()
-	{
+  /**
+   * onAfterRender.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterRender()
+  {
 
-	}
+  }
 
-	/**
-	 * onAfterCompileHead.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterCompileHead()
-	{
+  /**
+   * onAfterCompileHead.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterCompileHead()
+  {
 
-	}
+  }
 
-	/**
-	 * OnAfterCompress.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterCompress()
-	{
+  /**
+   * OnAfterCompress.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterCompress()
+  {
 
-	}
+  }
 
-	/**
-	 * onAfterRespond.
-	 *
-	 * @return  void.
-	 *
-	 * @since   1.0
-	 */
-	public function onAfterRespond()
-	{
+  /**
+   * onAfterRespond.
+   *
+   * @return  void.
+   *
+   * @since   1.0
+   */
+  public function onAfterRespond()
+  {
 
-	}
+  }
 }

@@ -15,9 +15,11 @@ JHtml::_('stylesheet', 'com_crisp/style.css', array(), true);
 ?>
 
 <div class="wrap crisp-wrap">
-  <div class="crisp-modal">
-    <span class="crisp-span">Crisp is working. Click on retry to reconfigure</span>
-    <?php print JHtml::_('image', "com_crisp/check.png", "test", array(), true); ?>
-    <a class="crisp-retry" href="<?php print  $this->add_to_crisp_link;?>">Retry</a>
-  </div>
+    <div class="crisp-modal">
+    	<h2 class="crisp-title">Connected with Crisp.</h2>
+    	<p class="crisp-subtitle">You can now use Crisp from your homepage.</p>
+    	<a class="crisp-button crisp-neutral" href="https://app.crisp.chat/settings/website/<?php print $this->website_id; ?>">Go to my Crisp settings</a>
+    	<a class="crisp-button crisp" href="https://app.crisp.chat/website/<?php print $this->website_id; ?>/inbox/">Go to my Inbox</a>
+    	<a class="crisp-button crisp-neutral" href="<?php print $this->add_to_crisp_link;?>">Reconfigure</a>
+    </div>
 </div>
