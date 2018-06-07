@@ -32,6 +32,7 @@ class CrispViewCrisp extends JViewLegacy
 		$this->toolbar();
 
 		$params = JComponentHelper::getParams('com_crisp');
+		$jinput = JFactory::getApplication()->input;
 
 		if (!empty($jinput->get('crisp_website_id', ''))) {
   			$params->set('website_id', $jinput->get('crisp_website_id', ''));
