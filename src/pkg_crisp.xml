@@ -8,13 +8,13 @@
 **/
  -->
 <extension type="package" version="3.1">
-	<name>Crisp</name>
+	<name>Crisp Livechat</name>
 	<packagename>crisp</packagename>
 	<author>Crisp IM</author>
 	<authorEmail>baptiste@crisp.chat</authorEmail>
 	<authorUrl>https://crisp.chat</authorUrl>
 	<creationDate></creationDate>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<url>https://crisp.chat</url>
 	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
