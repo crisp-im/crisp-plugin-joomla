@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
     <update>
-        <name>Crisp Livecha</name>
+        <name>Crisp Livechat</name>
         <description>Crisp Livechat Plugin</description>
         <element>crisp</element>
         <type>file</type>
