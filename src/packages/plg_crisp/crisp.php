@@ -56,7 +56,7 @@ class plgSystemCrisp extends JPlugin
     if (!$app->isSite() || ($doc->getMimeEncoding() != 'text/html'))
       return;
 
-    $params = JComponentHelper::getParams('com_crisp');
+    $params = JComponentHelper::getParams('com_crisplivechat');
 
     $is_installed = !empty($params->get('website_id'));
 

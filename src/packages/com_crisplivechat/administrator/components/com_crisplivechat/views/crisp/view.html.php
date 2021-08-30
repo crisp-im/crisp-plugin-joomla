@@ -31,25 +31,23 @@ class CrispViewCrisp extends JViewLegacy
 		// Show the toolbar
 		$this->toolbar();
 
-		$params = JComponentHelper::getParams('com_crisp');
+		$params = JComponentHelper::getParams('com_crisplivechat');
 		$jinput = JFactory::getApplication()->input;
 
 		if (!empty($jinput->get('crisp_website_id', ''))) {
   			$params->set('website_id', $jinput->get('crisp_website_id', ''));
-			$componentid = JComponentHelper::getComponent('com_crisp')->id;
+			$componentid = JComponentHelper::getComponent('com_crisplivechat')->id;
 			$table = JTable::getInstance('extension');
 			$table->load($componentid);
 			$table->bind(array('params' => $params->toString()));
 
 			// check for error
 			if (!$table->check()) {
-					echo "error";
 			    echo $table->getError();
 			    return false;
 			}
 			// Save to database
 			if (!$table->store()) {
-				echo "error";
 			    echo $table->getError();
 			    return false;
 			}

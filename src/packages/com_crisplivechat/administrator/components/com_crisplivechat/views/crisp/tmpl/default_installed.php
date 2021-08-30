@@ -10,7 +10,7 @@
 
 defined('_JEXEC') or die;
 
-JHtml::_('stylesheet', 'com_crisp/style.css', array(), true);
+JHtml::_('stylesheet', 'com_crisplivechat/style.css', array(), true);
 
 ?>
 

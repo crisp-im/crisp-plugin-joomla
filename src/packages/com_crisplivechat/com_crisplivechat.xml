@@ -11,7 +11,7 @@
 	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
 
 	<!-- Media files -->
-	<media folder="media/com_crisp" destination="com_crisp">
+	<media folder="media/com_crisplivechat" destination="com_crisplivechat">
 		<folder>css</folder>
 		<folder>images</folder>
 	</media>
@@ -19,11 +19,11 @@
 	<!-- Back-end files -->
 	<administration>
 		<!-- Menu entries -->
-		<menu link="option=com_crisp">Crisp</menu>
+		<menu link='index.php?option=com_crisplivechat'>Crisp</menu>
 
 		<!-- Core files -->
-		<files folder="administrator/components/com_crisp">
-			<filename>crisp.php</filename>
+		<files folder="administrator/components/com_crisplivechat">
+			<filename>crisplivechat.php</filename>
 			<filename>controller.php</filename>
 			<filename>LICENSE.txt</filename>
 			<folder>controllers</folder>

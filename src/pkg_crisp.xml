@@ -20,8 +20,8 @@
 	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
 
 	<files folder="packages">
-		<file type="component" id="com_crisp">com_crisp.zip</file>
-		<file type="plugin" id="crisp" group="content">plg_crisp.zip</file>
+		<file type="component" id="com_crisplivechat">com_crisplivechat.zip</file>
+		<file type="plugin" id="plg_crisp" group="content">plg_crisp.zip</file>
 	</files>
 
 	<updateservers>
