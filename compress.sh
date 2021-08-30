@@ -4,10 +4,15 @@ mkdir crisp/packages
 cp -r src/packages/com_crisp crisp/packages
 cp -r src/packages/plg_crisp crisp/packages
 
-zip -r crisp/packages/com_crisp crisp/packages/com_crisp
-zip -r crisp/packages/plg_crisp crisp/packages/
-rm -r -f crisp/packages/com_crisp 
-rm -r -f crisp/packages/plg_crisp 
+cd crisp/packages
+zip -r com_crisp com_crisp
+zip -r plg_crisp plg_crisp
+
+rm -r -f com_crisp
+rm -r -f plg_crisp
+
+cd ..
+cd ..
 
 zip -r crisp crisp
 
