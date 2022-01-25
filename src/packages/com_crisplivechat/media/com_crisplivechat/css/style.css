@@ -27,14 +27,13 @@
   cursor: pointer;
   display: inline-block;
   border-radius: .25rem;
-  width: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 12px;
 }
 
-.crisp-modal .crisp-button..crisp-success {
+.crisp-modal .crisp-button.crisp-success {
   color: #fff;
   background: #2ab27b;
   text-shadow: 0 1px 1px rgba(0,0,0,.1);

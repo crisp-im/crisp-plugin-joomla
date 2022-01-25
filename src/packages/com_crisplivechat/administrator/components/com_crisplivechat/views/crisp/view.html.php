@@ -41,6 +41,12 @@ class CrispViewCrisp extends JViewLegacy
 			$table->load($componentid);
 			$table->bind(array('params' => $params->toString()));
 
+			$query = "update #__extensions set enabled=1 where type = 'plugin' and element = 'crisp'";
+
+			$db = JFactory::getDBO();
+			$db->setQuery($query);
+			$db->execute();
+
 			// check for error
 			if (!$table->check()) {
 			    echo $table->getError();

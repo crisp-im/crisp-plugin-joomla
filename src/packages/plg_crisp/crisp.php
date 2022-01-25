@@ -53,9 +53,6 @@ class plgSystemCrisp extends JPlugin
     $doc = JFactory::getDocument();
     $user = JFactory::getUser();
 
-    if (!$app->isSite() || ($doc->getMimeEncoding() != 'text/html'))
-      return;
-
     $params = JComponentHelper::getParams('com_crisplivechat');
 
     $is_installed = !empty($params->get('website_id'));

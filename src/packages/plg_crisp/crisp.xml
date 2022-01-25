@@ -10,9 +10,6 @@
 	<url>https://crisp.chat</url>
 	<description>Crisp is a free and beautiful livechat to interact with customers.</description>
 
-	<!-- Scripts to run on installation -->
-	<scriptfile>script.php</scriptfile>
-
 	<!-- Plugin files -->
 	<files>
 		<filename plugin="crisp">crisp.php</filename>

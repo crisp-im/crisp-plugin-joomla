@@ -10,7 +10,8 @@
 
 defined('_JEXEC') or die;
 
-JHtml::_('stylesheet', 'com_crisplivechat/style.css', array(), true);
+$document = JFactory::getDocument();
+$document->addStyleSheet('/media/com_crisplivechat/css/style.css');
 
 ?>
 
